@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rocket League BARL Overlay Designs</title>
+    <meta name="author" content="LNDRLNDRLNDR">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+          content="Custom BARL Overlay for Rocket League designs for professional esport live streams.">
+    <meta name="keywords"
+          content="Rocket League, BARL, RL, Overlay, HUD, esport, live, stream, designs, professional.">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="ico.png">
+    <link rel="apple-touch-icon" href="ico.png"/>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GPS2BDRQ8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-7GPS2BDRQ8');
+    </script>
+
+
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            color: #041e49;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        html {
+            background: #f3f6fc;
+            margin: 0;
+        }
+
+        main {
+
+            width: min(90%, 700px);
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            border: 2px solid transparent;
+            border-radius: 24px;
+            padding: 20px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            color: #041e49;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        #scroll-to-top {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #scroll-to-top.show {
+            opacity: 1;
+        }
+
+        #nav {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2.75rem;
+
+            margin-bottom: 2px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.15rem;
+            font-weight: 700;
+
+            margin-bottom: 2px;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        section {
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: scale-down;
+            width: 100%;
+            max-width: 720px;
+            padding-top: 35px;
+        }
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: scale-down;
+            width: 100%;
+            max-width: 720px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px #1e1e1e70;
+        }
+
+        .portfolio_space {
+            display: flex;
+            justify-content: center;
+            flex-flow: column wrap;
+        }
+
+
+        header, footer {
+            width: 100%;
+            background-color: #1e1e1e;
+            color: white;
+            font-size: 22px;
+        }
+
+        footer ul li {
+            color: white;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        header ul, footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        header li {
+            padding-left: 25px;
+            padding-right: 25px;
+            height: 40px;
+        }
+
+        header {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header li a {
+            display: block;
+            /*padding: 14px 25px 10px 25px;*/
+            text-transform: uppercase;
+            color: #6696fe !important;
+            text-decoration: none !important;
+            font-size: 24px;
+            /*margin: 20px;*/
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid transparent;
+        }
+
+        header li.active a {
+            display: block;
+            /*padding: 14px 25px 10px 25px;*/
+            text-transform: uppercase;
+            color: #f44336 !important;
+            text-decoration: none !important;
+            font-size: 24px;
+            /*margin: 20px;*/
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid #f44336;
+        }
+
+        header li a:hover {
+            display: block;
+            /*padding: 14px 25px 10px 25px;*/
+            text-transform: uppercase;
+            color: #f8982d !important;
+            text-decoration: none !important;
+            font-size: 24px;
+            /*margin: 20px;*/
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid #f8982d;
+        }
+
+        .video_box {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-flow: column;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px #1e1e1e70;
+            width: min(90%, 560px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .discord-btn {
+            background-color: #7289DA;
+            margin-top: 0px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 2px 2px 2px #1e1e1e;
+            width: fit-content;
+        }
+
+        .discord-btn:hover {
+            background-color: #f8982d !important;
+            margin-top: 0px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 2px 2px 2px #1e1e1e;
+            width: fit-content;
+        }
+
+        .discord-svg {
+            margin-right: 15px;
+            width: 25px;
+            height: 25px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <ul>
+        <li title="CARL: Analysis Tool for Rocket League">
+            <a href="https://lndrlndr.github.io/">CARL</a>
+        </li>
+        <li title="BARL: Broadcast Assistant for Rocket League">
+            <a href="https://lndrlndr.github.io/BARL-Overlay/">BARL</a>
+        </li>
+
+
+        <li title="Home"><a href="https://lndrlndr.github.io/lndrlndrlndr">
+            <img style="height: 50px; width: 50px; border-radius: 50%; transform: translateY(-5px)"
+                 alt="LNDRLNDRLNDR" src="https://lndrlndr.github.io/lndrlndrlndr/icon.png"/> </a>
+        </li>
+
+        <li title="Custom Overlays">
+            <a href="https://lndrlndr.github.io/portfolio/">OVERLAYS</a>
+        </li>
+
+        <li title="Check out my contact information">
+            <a href="https://lndrlndr.github.io/Contact/">CONTACT</a>
+        </li>
+    </ul>
+</header>
+<main>
+    <h1>BARL Overlay Designs for Rocket League</h1>
+
+    <video class="video_box" loop controls>
+        <source src="https://lndrlndr.github.io/BARL/BARL_RL_Overlay_720.mp4" type="video/mp4">
+        Your browser does not support the video player.
+    </video>
+    <a href="https://discord.gg/SqUq2DhTCR" target="_blank"
+       class="waves-effect waves-light btn discord-btn btn-large"
+       rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="discord-svg" viewBox="0 0 16 16">
+            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+        </svg>
+        <div>Join the Discord</div>
+        <i class="material-icons" style="margin-left: 7px">open_in_new</i>
+    </a>
+
+    <h2>What is a BARL Overlay for Rocket League?</h2>
+    <p>A BARL Overlay is a free stream overlay for Rocket League that provides a game HUD that goes on top of your
+        Rocket League. It contains a scoreboard with fully automated series score, team boost meters to enhance the
+        viewer experience, and full design customization so you can fit it to your brand and events.</p>
+
+
+    <h2>Custom BARL Designs</h2>
+    <p>
+        Below you can see some of the many custom made BARL Designs that you can download in the Discord.<br/>
+    </p>
+
+
+    <h3>TransparentRoundedFloating</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design TransparentRoundedFloating"
+            alt="TransparentRoundedFloating BARL Design"
+            src="720x/TransparentRoundedFloating.jpg"
+    />
+    <h3>GeometricDreamscape</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design GeometricDreamscape" alt="GeometricDreamscape BARL Design"
+            src="720x/GeometricDreamscape.jpg"
+    />
+    <h3>BoxedLines</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design BoxedLines" alt="BoxedLines BARL Design"
+            src="720x/BoxedLines.jpg"
+    />
+    <h3>SkewedEverything</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design SkewedEverything" alt="SkewedEverything BARL Design"
+            src="720x/SkewedEverything.jpg"
+    />
+    <h3>SquaredColorAccent</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design SquaredColorAccent" alt="SquaredColorAccent BARL Design"
+            src="720x/SquaredColorAccent.jpg"
+    />
+    <h3>TransparentPrismShift</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design TransparentPrismShift" alt="TransparentPrismShift BARL Design"
+            src="720x/TransparentPrismShift.jpg"
+    />
+    <h3>SlicedCompressed</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design SlicedCompressed" alt="SlicedCompressed BARL Design"
+            src="720x/SlicedCompressed.jpg"
+    />
+    <h3>ObsidianSports</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design ObsidianSports" alt="ObsidianSports BARL Design"
+            src="720x/ObsidianSports.jpg"
+    />
+    <h3>F1 Racing</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design F1 Racing" alt="F1 Racing BARL Design"
+            src="720x/F1%20Racing.jpg"
+    />
+    <h3>CuttingEdgeTurbulence</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design CuttingEdgeTurbulence" alt="CuttingEdgeTurbulence BARL Design"
+            src="720x/CuttingEdgeTurbulence.jpg"
+    />
+    <h3>CornerCutNFL</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design CornerCutNFL" alt="CornerCutNFL BARL Design"
+            src="720x/CornerCutNFL.jpg"
+    />
+    <h3>BoxySkewGradient</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design BoxySkewGradient" alt="BoxySkewGradient BARL Design"
+            src="720x/BoxySkewGradient.jpg"
+    />
+    <h3>TransparentBoxyBoxy</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design TransparentBoxyBoxy" alt="TransparentBoxyBoxy BARL Design"
+            src="720x/TransparentBoxyBoxy.jpg"
+    />
+    <h3>ColoredBoxyStacked</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design ColoredBoxyStacked" alt="ColoredBoxyStacked BARL Design"
+            src="720x/ColoredBoxyStacked.jpg"
+    />
+    <h3>ColoredRectangles</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design ColoredRectangles" alt="ColoredRectangles BARL Design"
+            src="720x/ColoredRectangles.jpg"
+    />
+    <h3>SkewedOneColor</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design SkewedOneColor" alt="SkewedOneColor BARL Design"
+            src="720x/SkewedOneColor.jpg"
+    />
+    <h3>EclipseSkewed</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design EclipseSkewed" alt="EclipseSkewed BARL Design"
+            src="720x/EclipseSkewed.jpg"
+    />
+    <h3>AngledColorOverdrive</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design AngledColorOverdrive" alt="AngledColorOverdrive BARL Design"
+            src="720x/AngledColorOverdrive.jpg"
+    />
+    <h3>BoxyLinearGradient</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design BoxyLinearGradient" alt="BoxyLinearGradient BARL Design"
+            src="720x/BoxyLinearGradient.jpg"
+    />
+    <h3>AeroAccentFlow</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design AeroAccentFlow" alt="AeroAccentFlow BARL Design"
+            src="720x/AeroAccentFlow.jpg"
+    />
+    <h3>RoundedTransparent</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design RoundedTransparent" alt="RoundedTransparent BARL Design"
+            src="720x/RoundedTransparent.jpg"
+    />
+    <h3>RLCS 2021 Style</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design RLCS 21" alt="RLCS 21 BARL Design"
+            src="720x/RLCS21.jpg"
+    />
+    <h3>RLCS 2023 Style</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design RLCS 23" alt="RLCS 23 BARL Design"
+            src="720x/RLCS23.jpg"
+    />
+    <h3>HorizonHues</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design HorizonHues" alt="HorizonHues BARL Design"
+            src="720x/HorizonHues.jpg"
+    />
+    <h3>AquaSphereElysium</h3>
+    <!--        <p></p>-->
+    <img
+            itemprop="image" title="BARL Design AquaSphereElysium" alt="AquaSphereElysium BARL Design"
+            src="720x/AquaSphereElysium.jpg"
+    />
+
+    <h2>How can I get an overlay for Rocket League?</h2>
+    <p>With the BARL application getting an overlay for Rocket League is as simple as clicking a few buttons. The
+        initial configuration is a breeze, requiring just a minute of your time and a straightforward process. Once set
+        up, you're ready to start streaming. Thanks to the fully automated overlay, you can channel all your
+        attention into the gameplay, eliminating the need to tinker with settings mid-game. This not only elevates your
+        personal experience but also takes your stream to the next level. Viewers and sponsors alike will undoubtedly
+        appreciate the enhanced quality and professionalism brought by the overlay, making your stream a more enjoyable
+        and appealing experience compared to those without it!</p>
+
+
+    <h6 style="text-align: center; font-weight: bold;">Download for Free! Join the Discord to learn more:</h6>
+    <a href="https://discord.gg/SqUq2DhTCR" target="_blank"
+       class="waves-effect waves-light btn discord-btn btn-large"
+       rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="discord-svg" viewBox="0 0 16 16">
+            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+        </svg>
+        <div>Join the Discord</div>
+        <i class="material-icons" style="margin-left: 7px">open_in_new</i>
+    </a>
+
+
+    <div style="height: 15px;"></div>
+
+    <!--    <section id="contact" style="padding-bottom: 20px;">-->
+    <!--        <h2>Contact information</h2>-->
+    <!--        <p>Discord: lndrlndrlndr</p>-->
+    <!--        <p>Twitter: @LNDRLNDRLNDR</p>-->
+    <!--        <p>Mail: lndr.overlays@gmail.com</p>-->
+    <!--    </section>-->
+</main>
+<a id="scroll-to-top" href="#" class="btn-floating btn-large waves-effect waves-light red">
+    <i class="material-icons">arrow_upward</i>
+</a>
+<footer>
+    <ul style="color: white">
+        Contact:
+        <li title="Follow me on Twitter">
+            Twitter: <a target="_blank" href="https://x.com/LNDRLNDRLNDR" rel="nofollow">@LNDRLNDRLNDR</a>
+        </li>
+        <li title="Send me an Email">
+            Email: <a target="_blank" href="mailto:lndr.overlays@gmail.com" rel="nofollow">lndr.overlays@gmail.com</a>
+        </li>
+        <li title="Talk to me on Discord">
+            Discord: <a target="_blank" href="https://discord.gg/qF5FkJxNdR" rel="nofollow">lndrlndrlndr</a>
+        </li>
+    </ul>
+</footer>
+</body>
+<script>
+  const scrollToTopButton = document.querySelector('#scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    const main = document.querySelector('main');
+    const mainPosition = main.offsetTop;
+
+    if (currentScroll > mainPosition) {
+      scrollToTopButton.classList.add('show');
+    } else {
+      scrollToTopButton.classList.remove('show');
+    }
+  });
+
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+</script>
+</html>
