@@ -11,8 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="BARL_Logo_Circle.png">
-    <link rel="apple-touch-icon" href="BARL_Logo_Circle.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="icon.ico">
+    <link rel="apple-touch-icon" href="icon.ico" />
 
 
     <!-- HTML Meta Tags -->
@@ -62,23 +62,20 @@
     </script>
     
     <style>
-        html, body {
+        html,
+        body {
             height: 100%;
             width: 100%;
-            background: transparent;
             font-family: 'Montserrat', sans-serif;
             color: #041e49;
             margin: 0;
+            padding: 0;
+            background: transparent;
         }
 
         html {
             background: #f3f6fc;
             margin: 0;
-        }
-
-        body {
-            display: flex;
-            flex-flow: column;
         }
 
         main {
@@ -158,9 +155,9 @@
         }
 
         #scroll-to-top {
-            position: fixed;
+            /* position: fixed;
             bottom: 1rem;
-            right: 1rem;
+            right: 1rem; */
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
@@ -169,29 +166,66 @@
             opacity: 1;
         }
 
-        header, footer {
+        header {
             width: 100%;
-            background-color: #1e1e1e;
-            color: white;
-            font-size: 22px;
+            background-color: #ffffff;
+            color: #041e49;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #041e49;
         }
 
-        footer ul li {
-            color: white;
-            font-size: 20px;
-            margin-left: 15px;
-        }
-
-        footer ul li a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        header ul, footer {
+        header ul {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            row-gap: 30px;
+            row-gap: 25px;
+        }
+
+        header li {
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 35px;
+        }
+
+        header {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header li a {
+            display: block;
+            text-transform: uppercase;
+            color: #041e49 !important;
+            text-decoration: none !important;
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid transparent;
+        }
+
+        header li.active a {
+            display: block;
+            text-transform: uppercase;
+            color: #6696fe !important;
+            text-decoration: none !important;
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid #6696fe;
+        }
+
+        header li a:hover {
+            display: block;
+            text-transform: uppercase;
+            color: #f8982d !important;
+            text-decoration: none !important;
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid #f8982d;
         }
 
         .video_box {
@@ -200,50 +234,6 @@
             margin-right: auto;
         }
 
-        header li {
-            padding-left: 25px;
-            padding-right: 25px;
-            height: 40px;
-        }
-
-        header li a {
-            display: block;
-            /*padding: 14px 25px 10px 25px;*/
-            text-transform: uppercase;
-            color: #6696fe !important;
-            text-decoration: none !important;
-            font-size: 24px;
-            /*margin: 20px;*/
-            font-weight: 300;
-            transition: all .25s;
-            border-bottom: 3px solid transparent;
-        }
-
-        header li.active a {
-            display: block;
-            /*padding: 14px 25px 10px 25px;*/
-            text-transform: uppercase;
-            color: #f44336 !important;
-            text-decoration: none !important;
-            font-size: 24px;
-            /*margin: 20px;*/
-            font-weight: 300;
-            transition: all .25s;
-            border-bottom: 3px solid #f44336;
-        }
-
-        header li a:hover {
-            display: block;
-            /*padding: 14px 25px 10px 25px;*/
-            text-transform: uppercase;
-            color: #f8982d !important;
-            text-decoration: none !important;
-            font-size: 24px;
-            /*margin: 20px;*/
-            font-weight: 300;
-            transition: all .25s;
-            border-bottom: 3px solid #f8982d;
-        }
 
         .discord-btn {
             background-color: #7289DA;
@@ -270,6 +260,23 @@
             margin-top: -15px;
             list-style-type: disc;
         }
+
+        .buttons {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            display: flex;
+            flex-flow: column;
+            gap: 1rem;
+        }
+
+        #flag {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -418,27 +425,35 @@
         <div>Join the Discord</div>
     </a>
 
-
 </main>
 
-<a id="scroll-to-top" href="#" class="btn-floating btn-large waves-effect waves-light red">
-    <i class="material-icons">arrow_upward</i>
-</a>
+<div style="height: 35px;"></div>
 
-<footer>
-    <ul>
-        Contact:
-        <li title="Follow me on Twitter">
-            Twitter: <a target="_blank" href="https://x.com/LNDRLNDRLNDR">@LNDRLNDRLNDR</a>
-        </li>
-        <li title="Send me an Email">
-            Email: <a target="_blank" href="mailto:lndr.overlays@gmail.com">lndr.overlays@gmail.com</a>
-        </li>
-        <li title="Talk to me on Discord">
-            Discord: <a target="_blank" href="https://discord.gg/qF5FkJxNdR">lndrlndrlndr</a>
-        </li>
-    </ul>
-</footer>
+<div class="buttons">
+    <a id="scroll-to-top" class="btn-floating btn-large waves-effect waves-light red">
+        <i class="material-icons">arrow_upward</i>
+    </a>
+    <!-- <a id="flag" href="https://lndrlndr.github.io/BARL/" 
+    class="btn-floating btn-large waves-effect waves-light green" title="Switch to English">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="30" height="30">
+            <clipPath id="t">
+                <path d="M25,15h25v15zv15h-25zh-25v-15zv-15h25z"/>
+            </clipPath>
+            <path d="M0,0v30h50v-30z" fill="#012169"/>
+            <path d="M0,0 50,30M50,0 0,30" stroke="#fff" stroke-width="6"/>
+            <path d="M0,0 50,30M50,0 0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+            <path d="M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z" fill="#C8102E" stroke="#FFF" stroke-width="2"/>
+        </svg>   
+    </a> -->
+    <a id="flag" href="https://lndrlndr.github.io/BARL/index_fr.html" 
+    class="btn-floating btn-large waves-effect waves-light green" title="Passer au français">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="30" height="30">
+            <rect width="213.333" height="480" fill="#0055a4"/>
+            <rect width="213.333" height="480" x="213.333" fill="#fff"/>
+            <rect width="213.333" height="480" x="426.666" fill="#ef4135"/>
+        </svg>
+    </a>
+</div>
 </body>
 <script>
   const scrollToTopButton = document.querySelector('#scroll-to-top');
