@@ -1,0 +1,23 @@
+# BARL: Broadcast Assistant for Rocket League
+
+> BARL is a free downloadable Rocket League broadcasting overlay. It provides an automated series score tracker, real-time team boost meters, and customizable team names and logos. Works while spectating, playing yourself, or watching replays. Download is available via the BARL Discord server.
+
+## Product
+
+- [BARL Product Page](https://lndrlndr.github.io/BARL/): Detailed feature list with video demonstrations and download link
+- [BARL in French](https://lndrlndr.github.io/BARL/index_fr.html): French language version of the BARL product page
+- [Download BARL](https://lndrlndr.github.io/BARL_App/): Direct download page for the latest BARL installer
+
+## Features
+
+- Automated series score tracker (works for any best-of format)
+- Real-time team boost meters and individual player boost boxes
+- Customizable team names and logos via an in-app Control Panel
+- Works in spectator mode, while playing, and in replay mode
+- Free tier available; premium plan adds community overlay designs and full custom design modification
+- Simple installation: launcher download available in Discord, auto-integrates with Rocket League and OBS
+
+## Optional
+
+- [BARL Overview Page](https://lndrlndr.github.io/BARL-Overlay/): Marketing overview page for BARL
+- [Contact](https://lndrlndr.github.io/Contact/): Contact LNDRLNDRLNDR
